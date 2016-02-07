@@ -33,7 +33,13 @@ int countTrue(const double a[], int n)
 // element, return -1.
 int firstTrue(const double a[], int n)
 {
-    return -999;  // This is incorrect.
+    bool p = somePredicate(a[0]);
+    if (p){
+        return 0;
+    } else if(n==1)
+        return -1;
+    else
+        return 1+firstTrue(a+1, n-1);
 }
 
 // Return the subscript of the smallest element in the array (i.e.,
@@ -63,14 +69,25 @@ int indexOfMin(const double a[], int n)
 //    10 20 20
 bool includes(const double a1[], int n1, const double a2[], int n2)
 {
-    return false;  // This is not always correct.
+    if ((n1 == 1 || n2 == 1) && a1[0] == a2[0])
+        return true;
+    if(n1 == 1 && n2 == 1)
+        return false;
+    if(n2 == 0)
+        return false;
+    if (a1[0] != a2[0]) {
+        return includes(a1+1, n1-1, a2, n2);
+    } else
+        return includes(a1, n1, a2+1, n2-1);
 }
 
 int main(){
-    const double list[] = {-1, -2, -3, -4, -1, -2, -3};
+    const double list[] = {1, 2, 3, 4, 1, 2, 3};
+    const double list2[] = {1, 2, 5};
     /*if(countTrue(list, 7))
         cout << "true"<< endl;
     else
         cout << "false" << endl;*/
-    cout << countTrue(list, 7) << endl;
+    //cout << firstTrue(list, 7) << endl;
+    cout << includes(list, 7, list2, 3) << endl;
 }
