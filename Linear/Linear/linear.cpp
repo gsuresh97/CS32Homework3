@@ -67,10 +67,10 @@ bool includes(const double a1[], int n1, const double a2[], int n2)
 }
 
 int main(){
-    const double list[] = {1, 2, 3, -4, -1, 2, 3};
+    const double list[] = {-1, -2, -3, -4, -1, -2, -3};
     /*if(countTrue(list, 7))
         cout << "true"<< endl;
     else
         cout << "false" << endl;*/
-    
+    cout << countTrue(list, 7) << endl;
 }
