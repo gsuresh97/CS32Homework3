@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		608DFE451C67C49D00A9D622 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 608DFE441C67C49D00A9D622 /* main.cpp */; };
+		608DFE451C67C49D00A9D622 /* landmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 608DFE441C67C49D00A9D622 /* landmark.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		608DFE411C67C49D00A9D622 /* Landmark */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Landmark; sourceTree = BUILT_PRODUCTS_DIR; };
-		608DFE441C67C49D00A9D622 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		608DFE441C67C49D00A9D622 /* landmark.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = landmark.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		608DFE431C67C49D00A9D622 /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
-				608DFE441C67C49D00A9D622 /* main.cpp */,
+				608DFE441C67C49D00A9D622 /* landmark.cpp */,
 			);
 			path = Landmark;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				608DFE451C67C49D00A9D622 /* main.cpp in Sources */,
+				608DFE451C67C49D00A9D622 /* landmark.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
