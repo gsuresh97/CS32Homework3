@@ -10,6 +10,7 @@ public:
     }
     virtual string icon() const = 0;
     virtual string name() const = 0;
+    virtual ~Landmark();
     
 };
 
@@ -24,13 +25,32 @@ public:
     virtual string icon() const{
         return "bed";
     }
+    virtual ~Hotel();
 private:
     string m_name;
     
 };
 
 class Restaurant: public Landmark{
-    
+public:
+    Restaurant(string n, int c){
+        m_name = n;
+        c = m_capacity;
+    }
+    virtual string name() const{
+        return m_name;
+    }
+    virtual string icon() const{
+        return m_capacity>=40? "large knife/fork": "small knife/fork";
+    }
+    virtual string color() const{
+        return "blue";
+    }
+    virtual ~Restaurant();
+private:
+    string m_name;
+    int m_capacity;
+
 };
 
 class Hospital:public Landmark{
@@ -47,6 +67,7 @@ public:
     virtual string color() const{
         return "blue";
     }
+    virtual ~Hospital();
 private:
     string m_name;
 
