@@ -10,7 +10,9 @@ public:
     }
     virtual string icon() const = 0;
     virtual string name() const = 0;
-    virtual ~Landmark();
+    virtual ~Landmark(){
+        
+    }
     
 };
 
@@ -25,7 +27,9 @@ public:
     virtual string icon() const{
         return "bed";
     }
-    virtual ~Hotel();
+    virtual ~Hotel(){
+        cout << "Destroying the hotel " << name() <<".\n";
+    };
 private:
     string m_name;
     
@@ -46,7 +50,9 @@ public:
     virtual string color() const{
         return "blue";
     }
-    virtual ~Restaurant();
+    virtual ~Restaurant(){
+        cout << "Destroying the restaurant " << name()<<".\n";
+    };
 private:
     string m_name;
     int m_capacity;
@@ -67,7 +73,9 @@ public:
     virtual string color() const{
         return "blue";
     }
-    virtual ~Hospital();
+    virtual ~Hospital(){
+        cout << "Destroying the hospital " << name()<<".\n";
+    }
 private:
     string m_name;
 
