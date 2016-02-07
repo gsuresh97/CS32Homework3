@@ -5,44 +5,40 @@ using namespace std;
 //Your declarations and implementations would go here
 class Landmark{
 public:
+    Landmark(string n){
+        m_name = n;
+    }
     virtual string color() const{
         return "yellow";
     }
     virtual string icon() const = 0;
-    virtual string name() const = 0;
-    virtual ~Landmark(){
-        
+    string name() const {
+        return m_name;
     }
-    
+    virtual ~Landmark(){ }
+
+private:
+    string m_name;
 };
 
 class Hotel: public Landmark{
 public:
-    Hotel(string n){
-        m_name = n;
-    }
-    virtual string name() const{
-        return m_name;
-    }
+    Hotel(string n)
+    :Landmark(n){ }
+    
     virtual string icon() const{
         return "bed";
     }
     virtual ~Hotel(){
         cout << "Destroying the hotel " << name() <<".\n";
     };
-private:
-    string m_name;
-    
 };
 
 class Restaurant: public Landmark{
 public:
-    Restaurant(string n, int c){
-        m_name = n;
-        c = m_capacity;
-    }
-    virtual string name() const{
-        return m_name;
+    Restaurant(string n, int c)
+    :Landmark(n){
+        m_capacity = c;
     }
     virtual string icon() const{
         return m_capacity>=40? "large knife/fork": "small knife/fork";
@@ -54,19 +50,15 @@ public:
         cout << "Destroying the restaurant " << name()<<".\n";
     };
 private:
-    string m_name;
     int m_capacity;
 
 };
 
 class Hospital:public Landmark{
 public:
-    Hospital(string n){
-        m_name = n;
-    }
-    virtual string name() const{
-        return m_name;
-    }
+    Hospital(string n)
+    :Landmark(n){ }
+
     virtual string icon() const{
         return "H";
     }
@@ -76,8 +68,6 @@ public:
     virtual ~Hospital(){
         cout << "Destroying the hospital " << name()<<".\n";
     }
-private:
-    string m_name;
 
     
 };
