@@ -15,18 +15,17 @@ using namespace std;
 //	50 40 30			3
 int countIncludes(const double a1[], int n1, const double a2[], int n2)
 {
-    if (n1 == 1 && a1[0] == a2[0]) {
-        return 1;
+    if (n1 < n2 )
+        return 0;
+    if (n2 == 1 && a1[0] == a2[0]) {
+        return 1 + countIncludes(a1+1, n1-1, a2, n2);
     }
-    if(n2 != 0 && a1[0] == a2[0])
-        return countIncludes(a1+1, n1-1, a2+1, n2-1);
+    if(a1[0] == a2[0])
+        return countIncludes(a1+1, n1-1, a2, n2) + countIncludes(a1+1, n1-1, a2+1, n2-1);
+    else
+        return countIncludes(a1+1, n1-1, a2, n2);
 }
 
-int main(){
-    const double list[] = {10, 50, 40, 20, 50, 40, 20};
-    const double list2[] = {50, 40, 20};
-    cout << countIncludes(list, 7, list2, 3) << endl;
-}
 // Exchange two doubles
 void exchange(double& x, double& y)
 {
@@ -87,6 +86,7 @@ void split(double a[], int n, double splitter,
     }
 }
 
+
 // Rearrange the elements of the array so that
 // a[0] >= a[1] >= a[2] >= ... >= a[n-2] >= a[n-1]
 // If n <= 1, do nothing.
@@ -98,6 +98,7 @@ void order(double a[], int n)
     int fng = 0;
     int fl = 0;
     split(a, n, s, fng, fl);
+
     order(a, fng);
-    order(a + fl, n);
+    order(a + fl, n - fl);
 }
