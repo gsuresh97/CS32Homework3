@@ -53,6 +53,8 @@ int firstTrue(const double a[], int n)
 // examine, return -1.
 int indexOfMin(const double a[], int n)
 {
+    if(n <= 0)
+        return -1;
     if(n==1)
         return 0;
     if(a[n-1] <= a[indexOfMin(a, n-1)])
