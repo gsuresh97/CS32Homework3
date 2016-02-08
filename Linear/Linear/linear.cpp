@@ -38,8 +38,12 @@ int firstTrue(const double a[], int n)
         return 0;
     } else if(n==1)
         return -1;
-    else
-        return 1+firstTrue(a+1, n-1);
+    else{
+        int x = firstTrue(a+1, n-1);
+        if(x == -1)
+            return -1;
+        return x+1;
+    }
 }
 
 // Return the subscript of the smallest element in the array (i.e.,
@@ -49,7 +53,12 @@ int firstTrue(const double a[], int n)
 // examine, return -1.
 int indexOfMin(const double a[], int n)
 {
-    return -999;  // This is incorrect.
+    if(n==1)
+        return 0;
+    if(a[n-1] <= a[indexOfMin(a, n-1)])
+        return n-1;
+    else
+        return indexOfMin(a, n-1);
 }
 
 // If all n2 elements of a2 appear in the n1 element array a1, in
@@ -69,7 +78,7 @@ int indexOfMin(const double a[], int n)
 //    10 20 20
 bool includes(const double a1[], int n1, const double a2[], int n2)
 {
-    if ((n1 == 1 || n2 == 1) && a1[0] == a2[0])
+    if (n2 == 1 && a1[0] == a2[0])
         return true;
     if(n1 == 1 && n2 == 1)
         return false;
@@ -82,12 +91,12 @@ bool includes(const double a1[], int n1, const double a2[], int n2)
 }
 
 int main(){
-    const double list[] = {1, 2, 3, 4, 1, 2, 3};
-    const double list2[] = {1, 2, 5};
+    const double list[] = {-100, 2, -3, 0, 1, -20, -30};
+    const double list2[] = {1, 3, 2};
     /*if(countTrue(list, 7))
         cout << "true"<< endl;
     else
         cout << "false" << endl;*/
     //cout << firstTrue(list, 7) << endl;
-    cout << includes(list, 7, list2, 3) << endl;
+    cout << indexOfMin(list, 7) << endl;
 }
