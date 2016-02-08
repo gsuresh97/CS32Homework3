@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 // Return the number of ways that all n2 elements of a2 appear
 // in the n1 element array a1 in the same order (though not
 // necessarily consecutively).  The empty sequence appears in a
@@ -11,9 +15,18 @@
 //	50 40 30			3
 int countIncludes(const double a1[], int n1, const double a2[], int n2)
 {
-    return -999;  // This is incorrect.
+    if (n1 == 1 && a1[0] == a2[0]) {
+        return 1;
+    }
+    if(n2 != 0 && a1[0] == a2[0])
+        return countIncludes(a1+1, n1-1, a2+1, n2-1);
 }
 
+int main(){
+    const double list[] = {10, 50, 40, 20, 50, 40, 20};
+    const double list2[] = {50, 40, 20};
+    cout << countIncludes(list, 7, list2, 3) << endl;
+}
 // Exchange two doubles
 void exchange(double& x, double& y)
 {
@@ -79,5 +92,12 @@ void split(double a[], int n, double splitter,
 // If n <= 1, do nothing.
 void order(double a[], int n)
 {
-    return;  // This is not always correct.
+    if (n<=1)
+        return ;
+    double  s = a[n/2];
+    int fng = 0;
+    int fl = 0;
+    split(a, n, s, fng, fl);
+    order(a, fng);
+    order(a + fl, n);
 }
