@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stack>
 #include <string>
 
 using namespace std;
@@ -19,17 +18,30 @@ private:
     int m_c;
 };
 
-void explore(string maze[], stack<Coord>& toDo, int r, int c)
-{
-    if (maze[r][c] == OPEN)
-    {
-        toDo.push(Coord(r,c));
-        maze[r][c] = SEEN;  // anything non-OPEN will do
-    }
-}
-
 bool pathExists(string maze[], int nRows, int nCols, int sr, int sc, int er, int ec)
 {
+    if (sc == ec && sr == er) {
+        return true;
+    }
+    maze[sr][sc] = SEEN;
+    
+    //check North
+    if(maze[sr - 1][sc] == OPEN){
+        if (pathExists(maze, nRows, nCols, sr - 1, sc, er, ec))
+            return true;
+    }
+    if(maze[sr][sc + 1] == OPEN){
+        if (pathExists(maze, nRows, nCols, sr, sc + 1, er, ec))
+            return true;
+    }
+    if(maze[sr + 1][sc] == OPEN){
+        if (pathExists(maze, nRows, nCols, sr + 1, sc, er, ec))
+            return true;
+    }
+    if(maze[sr][sc - 1] == OPEN){
+        if (pathExists(maze, nRows, nCols, sr, sc - 1, er, ec))
+            return true;
+    }
     return false;
 }
 
@@ -48,7 +60,7 @@ int main()
         "XXXXXXXXXX"
     };
     
-    if (pathExists(maze, 10,10, 6,4, 1,1))
+    if (pathExists(maze, 10,10, 6,1, 1,1))
         cout << "Solvable!" << endl;
     else
         cout << "Out of luck!" << endl;
