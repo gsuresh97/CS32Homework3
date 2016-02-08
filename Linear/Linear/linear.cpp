@@ -12,6 +12,8 @@ bool somePredicate(double x)
 // least one of the array elements, false otherwise.
 bool anyTrue(const double a[], int n)
 {
+    if(n <= 0)
+        return false;
     if(n==1)
         return somePredicate(a[0]);
     if(!somePredicate(a[n-1]))
@@ -23,6 +25,8 @@ bool anyTrue(const double a[], int n)
 // somePredicate function returns true.
 int countTrue(const double a[], int n)
 {
+    if (n <=0 )
+        return 0;
     if (n==1)
         return (int)(somePredicate(a[0]));
     return somePredicate(a[n-1]) + countTrue(a, n-1);
@@ -33,6 +37,8 @@ int countTrue(const double a[], int n)
 // element, return -1.
 int firstTrue(const double a[], int n)
 {
+    if(n<=0)
+        return -1;
     bool p = somePredicate(a[0]);
     if (p){
         return 0;
