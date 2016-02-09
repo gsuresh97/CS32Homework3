@@ -1,0 +1,108 @@
+commit 9b28868bc49eb341a1c33f14bf65bd7f108e8f11
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 20:44:09 2016 -0800
+
+    Finished sorting and countInclude()
+
+commit 174c1ec22242114562d0e399e1175b71250b5811
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 20:01:51 2016 -0800
+
+    Tree sorting tentaively done and working on countInclude
+
+commit 0e53ae11b603a935d336898f6ca0a16003f3e3f5
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 17:37:18 2016 -0800
+
+    Tree Problem 4 set up
+
+commit 0db971b82c688990cb538aba467c0117fac3ac8e
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 17:33:22 2016 -0800
+
+    Maze recursive algorithm  solved
+
+commit e4cbc80e61260e3a641816d59d9b07b3c6a28914
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 17:15:22 2016 -0800
+
+    Maze stuff setup
+
+commit 39e56064391a4390accad17a63a7152bd03a37e6
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 16:52:15 2016 -0800
+
+    include and firstTrue tenatively fully functional and indexOfMin tenatively fully functional.
+
+commit 054c642923fa1e71c6a5a49c7d99e38ff6ccfab0
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 15:24:51 2016 -0800
+
+    include and firstTrue partly functional
+
+commit fd866bcfc5ca187a8dfb01e8677a9ae94f620069
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 14:04:11 2016 -0800
+
+    countTrue implemented correctly
+
+commit 24f9d00bfc6141606179cd3425555d508b028566
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 14:02:08 2016 -0800
+
+    anyTrue implemented correctly
+
+commit c45f0faf3d8b37680e837a0e7c1cda1b5d793112
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 13:01:23 2016 -0800
+
+    Problem 2: Linear added
+
+commit 5ada6e23fd21be509c739c81991407fe853f1da1
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 12:59:03 2016 -0800
+
+    Tentatively finished
+
+commit 8562c01ce13fcc1e8487095bfe1bb4258bf221e4
+Author: Gopi Suresh <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 12:39:55 2016 -0800
+
+    Functional but name() not implemented correctly.
+
+commit 017d055b255777658f4ae7b3c46892c2417b5fee
+Author: epsilonpie <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 12:05:42 2016 -0800
+
+    added more implementation
+
+commit dca468e9e1f4b2de9f8e209a33e33b6ec060501d
+Author: epsilonpie <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 11:42:38 2016 -0800
+
+    Some implemtation added
+
+commit c7df0acaa58e7f848be78e7514000ac731179cad
+Author: epsilonpie <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 10:40:51 2016 -0800
+
+    renamed file
+
+commit 0b4437fd830e5605d4d208b1da664987bcc56011
+Author: epsilonpie <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 10:38:58 2016 -0800
+
+    remove more extraneous files
+
+commit 0b8441e84f9be88ca481ffd064dcd6c382c11508
+Author: epsilonpie <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 10:35:52 2016 -0800
+
+    removed wrong files
+
+commit 194d23a2c55a94e2e186cf37363761459f7c0186
+Author: epsilonpie <suresh.gopikrishnan@gmail.com>
+Date:   Sun Feb 7 10:18:09 2016 -0800
+
+    Initial Commit
+B
