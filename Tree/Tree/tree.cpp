@@ -1,7 +1,3 @@
-#include <iostream>
-
-using namespace std;
-
 // Return the number of ways that all n2 elements of a2 appear
 // in the n1 element array a1 in the same order (though not
 // necessarily consecutively).  The empty sequence appears in a
