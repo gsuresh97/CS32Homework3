@@ -1,13 +1,3 @@
-#include <iostream>
-#include <cmath>
-
-using namespace std;
-
-bool somePredicate(double x)
-{
-    return x < 0;
-}
-
 // Return true if the somePredicate function returns true for at
 // least one of the array elements, false otherwise.
 bool anyTrue(const double a[], int n)
@@ -96,15 +86,4 @@ bool includes(const double a1[], int n1, const double a2[], int n2)
         return includes(a1+1, n1-1, a2, n2);
     } else
         return includes(a1, n1, a2+1, n2-1);
-}
-
-int main(){
-    const double list[] = {-100, 2, -3, 0, 1, -20, -30};
-    const double list2[] = {1, 3, 2};
-    /*if(countTrue(list, 7))
-        cout << "true"<< endl;
-    else
-        cout << "false" << endl;*/
-    //cout << firstTrue(list, 7) << endl;
-    cout << indexOfMin(list, 7) << endl;
 }
